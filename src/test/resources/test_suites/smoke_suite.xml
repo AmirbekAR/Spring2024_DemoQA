@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Smoke Test Suite" verbose="1">
     <test name="Smoke Test">
+        <groups>
+            <run>
+                <include name="UI"/>
+            </run>
+        </groups>
         <classes>
             <class name="advanced_locators.DatePickerTest"/>
             <class name="basic_locators.ByLinkedTextDemo"/>
@@ -21,4 +26,3 @@
         </classes>
     </test>
 </suite>
-
