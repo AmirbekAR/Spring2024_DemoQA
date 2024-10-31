@@ -164,7 +164,7 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>3.0.0-M5</version>
                         <configuration>
-                            <groups>UI</groups>
+                            <groups>UI, TC-1, TC-2, TC-3, TC-4</groups>
                             <suiteXmlFiles>
                                 <suiteXmlFile>src/test/resources/test_suites/smoke_suite.xml</suiteXmlFile>
                             </suiteXmlFiles>

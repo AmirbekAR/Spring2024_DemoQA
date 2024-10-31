@@ -5,6 +5,10 @@
         <groups>
             <run>
                 <include name="UI"/>
+                <include name="TC-1"/>
+                <include name="TC-2"/>
+                <include name="TC-3"/>
+                <include name="TC-4"/>
             </run>
         </groups>
         <classes>
