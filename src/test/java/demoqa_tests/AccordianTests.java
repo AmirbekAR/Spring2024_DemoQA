@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class AccordianTests extends BaseTest {
 
-    @Test(groups = {"UI", "TC-4"})
+    @Test()
     public void accordianTest() throws InterruptedException {
         helper.browserManager.openURL("https://demoqa.com/accordian");
 
