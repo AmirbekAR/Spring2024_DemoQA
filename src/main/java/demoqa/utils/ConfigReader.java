@@ -1,29 +1,20 @@
 package demoqa.utils;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
 
-    private static  Properties properties;
-
-    private ConfigReader() {
-
-    }
+    private static Properties properties = new Properties();
 
     static {
-        try {
-            String path = "src/main/resources/app.properties";
-            FileInputStream fileInputStream = new FileInputStream(path); // Получаем данные из path
-            properties = new Properties();
+        String path = "src/main/resources/app.properties";
+        try (FileInputStream fileInputStream = new FileInputStream(path)) {
             properties.load(fileInputStream);
-            fileInputStream.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.err.println("Не удалось загрузить файл конфигурации: " + e.getMessage());
+            throw new RuntimeException("Ошибка загрузки конфигурации", e);
         }
     }
 
